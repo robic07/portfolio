@@ -5,13 +5,14 @@ const profile = {
   email: 'rborja.ccheetah@gmail.com',
   phone: '0906 295 1999',
   linkedin: 'https://www.linkedin.com/in/robic-john-borja-399328159/',
-  github: 'https://github.com/robic07',
   summary:
     'I help teams build stable web applications, resolve production issues fast, and deliver systems that stay maintainable as the business grows. My background covers backend development, production support, web and mobile delivery, debugging, documentation, and cross-team execution.',
 };
 
 const heroStatement =
-  'Backend-focused developer for business-critical applications, production support, and delivery that holds up in real operations.';
+  'Web developer focused on dependable systems, backend delivery, and production support for real business operations.';
+
+const resumeUrl = `${import.meta.env.BASE_URL}Robic-John-Borja-Resume.pdf`;
 
 const metrics = [
   { value: '5+', label: 'Years Building Web Products' },
@@ -188,29 +189,33 @@ export default function App() {
 
             <div className="cta-group">
               <a className="button" href="#experience">View Experience</a>
-              <a className="button button-secondary" href={`mailto:${profile.email}`}>Email Me</a>
+              <a className="button button-secondary" href={resumeUrl} target="_blank" rel="noreferrer">
+                Download Resume
+              </a>
             </div>
 
             <div className="social-strip">
               <a href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
-              <a href={profile.github} target="_blank" rel="noreferrer">GitHub</a>
+              <a href={`mailto:${profile.email}`}>Email</a>
             </div>
           </div>
 
           <aside className="profile-card">
+            <p className="profile-label">Current Focus</p>
+            <p className="profile-value">Backend development, business systems, and production support</p>
             <p className="profile-label">Based in</p>
             <p className="profile-value">{profile.location}</p>
             <p className="profile-label">Email</p>
             <a className="profile-link" href={`mailto:${profile.email}`}>{profile.email}</a>
             <p className="profile-label">Phone</p>
             <p className="profile-value">{profile.phone}</p>
-            <p className="profile-label">Profiles</p>
+            <p className="profile-label">Profile</p>
             <div className="profile-links">
               <a className="profile-link subtle-link" href={profile.linkedin} target="_blank" rel="noreferrer">
                 LinkedIn
               </a>
-              <a className="profile-link subtle-link" href={profile.github} target="_blank" rel="noreferrer">
-                GitHub
+              <a className="profile-link subtle-link" href={resumeUrl} target="_blank" rel="noreferrer">
+                Resume PDF
               </a>
             </div>
           </aside>
@@ -251,8 +256,8 @@ export default function App() {
 
         <section className="section signal-panel">
           <div className="section-heading">
-            <p className="section-tag">Professional Highlights</p>
-            <h2>Key areas of experience across development, support, and delivery.</h2>
+            <p className="section-tag">Experience Snapshot</p>
+            <h2>Core strengths developed through backend work, production support, and project delivery.</h2>
           </div>
 
           <div className="signal-grid">
@@ -267,8 +272,8 @@ export default function App() {
 
         <section className="section">
           <div className="section-heading">
-            <p className="section-tag">Working Style</p>
-            <h2>How I contribute across engineering, support, and delivery work.</h2>
+            <p className="section-tag">How I Work</p>
+            <h2>Approach shaped by ownership, coordination, and practical problem solving.</h2>
           </div>
 
           <div className="reason-grid">
@@ -313,7 +318,7 @@ export default function App() {
         <section className="section" id="projects">
           <div className="section-heading">
             <p className="section-tag">Selected Work</p>
-            <h2>Projects and systems drawn from my actual resume experience.</h2>
+            <h2>Selected systems and platforms based on my actual project experience.</h2>
           </div>
 
           <div className="project-grid">
@@ -378,8 +383,8 @@ export default function App() {
             <a className="button button-secondary" href={profile.linkedin} target="_blank" rel="noreferrer">
               LinkedIn
             </a>
-            <a className="button button-secondary" href={profile.github} target="_blank" rel="noreferrer">
-              GitHub
+            <a className="button button-secondary" href={resumeUrl} target="_blank" rel="noreferrer">
+              Resume PDF
             </a>
           </div>
         </section>
