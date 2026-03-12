@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | Alex Carter</title>
+    <meta
+      name="description"
+      content="Responsive portfolio website for Alex Carter featuring projects, skills, and resume highlights."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="module">
+      import React from 'https://esm.sh/react@18.3.1';
+      import { createRoot } from 'https://esm.sh/react-dom@18.3.1/client';
+
+      const skills = [
+        'React',
+        'TypeScript',
+        'JavaScript (ES6+)',
+        'Node.js',
+        'REST APIs',
+        'UI/UX Design',
+        'Responsive Web Design',
+        'Git & GitHub',
+      ];
+
+      const experiences = [
+        {
+          role: 'Frontend Developer',
+          company: 'Brightwave Digital',
+          date: '2022 — Present',
+          points: [
+            'Built modern customer-facing React applications with reusable component patterns.',
+            'Improved Lighthouse performance scores by 30% through code splitting and image optimization.',
+            'Collaborated with product and design teams to ship accessible and responsive user interfaces.',
+          ],
+        },
+        {
+          role: 'Web Developer',
+          company: 'Freelance',
+          date: '2020 — 2022',
+          points: [
+            'Delivered responsive websites for clients in education, e-commerce, and healthcare.',
+            'Translated business requirements into maintainable front-end architecture.',
+            'Implemented analytics and SEO best practices to improve traffic and conversions.',
+          ],
+        },
+      ];
+
+      const projects = [
+        {
+          title: 'InsightBoard Analytics',
+          description:
+            'A dashboard that visualizes business metrics in real time with interactive charts and role-based access.',
+          stack: 'React, Node.js, Chart.js, PostgreSQL',
+        },
+        {
+          title: 'Nomad Journal',
+          description:
+            'A mobile-first travel journaling app with offline support, photo uploads, and route snapshots.',
+          stack: 'React, Firebase, PWA, Cloud Storage',
+        },
+        {
+          title: 'HireFlow Portal',
+          description:
+            'A streamlined applicant tracking portal that helps recruiters shortlist candidates and automate updates.',
+          stack: 'React, Express, MongoDB, Tailwind CSS',
+        },
+      ];
+
+      function App() {
+        return React.createElement(
+          'div',
+          { className: 'page' },
+          React.createElement(
+            'header',
+            { className: 'hero' },
+            React.createElement(
+              'nav',
+              { className: 'nav' },
+              React.createElement('p', { className: 'logo' }, 'Alex Carter'),
+              React.createElement(
+                'a',
+                { href: '#contact', className: 'button button-secondary' },
+                "Let's Talk",
+              ),
+            ),
+            React.createElement(
+              'div',
+              { className: 'hero-content' },
+              React.createElement(
+                'p',
+                { className: 'eyebrow' },
+                'Frontend Engineer • Problem Solver • Design-minded Developer',
+              ),
+              React.createElement(
+                'h1',
+                null,
+                'I build fast, beautiful, and accessible web experiences that turn ideas into products.',
+              ),
+              React.createElement(
+                'p',
+                { className: 'hero-description' },
+                "I'm a frontend developer with experience building responsive products from concept to launch. I focus on usability, performance, and scalable architecture.",
+              ),
+              React.createElement(
+                'div',
+                { className: 'cta-group' },
+                React.createElement('a', { href: '#projects', className: 'button' }, 'View Projects'),
+                React.createElement(
+                  'a',
+                  { href: '#experience', className: 'button button-secondary' },
+                  'Resume Highlights',
+                ),
+              ),
+            ),
+          ),
+          React.createElement(
+            'main',
+            null,
+            React.createElement(
+              'section',
+              { className: 'section', id: 'about' },
+              React.createElement('h2', null, 'About Me'),
+              React.createElement(
+                'p',
+                null,
+                'I enjoy transforming complex problems into simple, polished interfaces. My work combines technical excellence with empathy for users, resulting in products people actually enjoy using.',
+              ),
+            ),
+            React.createElement(
+              'section',
+              { className: 'section', id: 'skills' },
+              React.createElement('h2', null, 'Skills'),
+              React.createElement(
+                'div',
+                { className: 'chip-grid' },
+                ...skills.map((skill) => React.createElement('span', { key: skill, className: 'chip' }, skill)),
+              ),
+            ),
+            React.createElement(
+              'section',
+              { className: 'section', id: 'experience' },
+              React.createElement('h2', null, 'Experience'),
+              React.createElement(
+                'div',
+                { className: 'card-grid' },
+                ...experiences.map((item) =>
+                  React.createElement(
+                    'article',
+                    { key: item.role, className: 'card' },
+                    React.createElement(
+                      'div',
+                      { className: 'card-header' },
+                      React.createElement('h3', null, item.role),
+                      React.createElement('span', null, item.date),
+                    ),
+                    React.createElement('p', { className: 'company' }, item.company),
+                    React.createElement(
+                      'ul',
+                      null,
+                      ...item.points.map((point) => React.createElement('li', { key: point }, point)),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            React.createElement(
+              'section',
+              { className: 'section', id: 'projects' },
+              React.createElement('h2', null, 'Projects'),
+              React.createElement(
+                'div',
+                { className: 'card-grid project-grid' },
+                ...projects.map((project) =>
+                  React.createElement(
+                    'article',
+                    { key: project.title, className: 'card project-card' },
+                    React.createElement('h3', null, project.title),
+                    React.createElement('p', null, project.description),
+                    React.createElement('p', { className: 'stack' }, project.stack),
+                  ),
+                ),
+              ),
+            ),
+            React.createElement(
+              'section',
+              { className: 'section contact', id: 'contact' },
+              React.createElement('h2', null, "Let's Build Something Great"),
+              React.createElement('p', null, 'Open to frontend opportunities, freelance work, and exciting collaborations.'),
+              React.createElement(
+                'a',
+                { className: 'button', href: 'mailto:alex.carter.dev@email.com' },
+                'alex.carter.dev@email.com',
+              ),
+            ),
+          ),
+        );
+      }
+
+      createRoot(document.getElementById('root')).render(React.createElement(App));
+    </script>
+  </body>
+</html>
