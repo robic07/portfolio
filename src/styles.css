@@ -158,6 +158,7 @@ h3 {
 }
 
 .hero-description,
+.hero-statement,
 .section p,
 .timeline-summary,
 .project-description,
@@ -166,6 +167,13 @@ h3 {
 .profile-value,
 .timeline-company {
   color: #c4ccd8;
+}
+
+.hero-statement {
+  max-width: 34rem;
+  margin-bottom: 0.9rem;
+  font-size: 1.18rem;
+  color: #fff2e3;
 }
 
 .cta-group,
@@ -195,6 +203,27 @@ h3 {
 
 .cta-group {
   margin-top: 1.6rem;
+}
+
+.social-strip {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.15rem;
+  flex-wrap: wrap;
+}
+
+.social-strip a,
+.subtle-link {
+  color: #cdd6e4;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(216, 164, 112, 0.28);
+  padding-bottom: 0.15rem;
+}
+
+.social-strip a:hover,
+.subtle-link:hover {
+  color: #fff5e8;
+  border-color: rgba(216, 164, 112, 0.7);
 }
 
 .button {
@@ -228,6 +257,12 @@ h3 {
   font-weight: 600;
   text-decoration: none;
   word-break: break-word;
+}
+
+.profile-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .metrics-grid {
@@ -269,6 +304,43 @@ h3 {
 .strength-list {
   display: grid;
   gap: 1rem;
+}
+
+.signal-panel {
+  overflow: hidden;
+}
+
+.signal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.signal-card {
+  position: relative;
+  min-height: 12rem;
+  padding: 1.3rem;
+  border-radius: 1.3rem;
+  background:
+    linear-gradient(160deg, rgba(216, 164, 112, 0.12), rgba(255, 255, 255, 0.03)),
+    rgba(18, 22, 30, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.signal-card p {
+  margin: 0;
+  max-width: 20ch;
+  font-size: 1.02rem;
+  color: #edf2fa;
+}
+
+.signal-mark {
+  display: inline-block;
+  margin-bottom: 1.4rem;
+  color: rgba(216, 164, 112, 0.75);
+  font-size: 2.1rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
 }
 
 .reason-grid {
@@ -384,6 +456,20 @@ h3 {
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+.project-topline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.project-index {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: rgba(216, 164, 112, 0.28);
+}
+
 .project-type {
   color: #9ab2ff;
   margin-bottom: 0.7rem;
@@ -434,7 +520,8 @@ h3 {
   .contact-panel,
   .skill-layout,
   .project-grid,
-  .reason-grid {
+  .reason-grid,
+  .signal-grid {
     grid-template-columns: 1fr;
   }
 

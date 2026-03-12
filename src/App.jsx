@@ -4,9 +4,14 @@ const profile = {
   location: 'Bacoor, Cavite, Philippines',
   email: 'rborja.ccheetah@gmail.com',
   phone: '0906 295 1999',
+  linkedin: 'https://www.linkedin.com/in/robic-john-borja-399328159/',
+  github: 'https://github.com/robic07',
   summary:
     'I help teams build stable web applications, resolve production issues fast, and deliver systems that stay maintainable as the business grows. My background covers backend development, production support, web and mobile delivery, debugging, documentation, and cross-team execution.',
 };
+
+const heroStatement =
+  'Backend-focused developer for business-critical applications, production support, and delivery that holds up in real operations.';
 
 const metrics = [
   { value: '5+', label: 'Years Building Web Products' },
@@ -26,6 +31,12 @@ const reasons = [
   'I can work on both feature delivery and production support, which reduces handoff gaps and speeds up issue resolution.',
   'I have experience across finance, e-commerce, inventory, and real estate systems with real business workflows.',
   'I contribute beyond coding through documentation, debugging, monitoring, collaboration, and user-facing problem solving.',
+];
+
+const recruiterSignals = [
+  'Experience supporting live financial and business systems',
+  'Hands-on work across backend APIs, debugging, databases, and cloud operations',
+  'Able to translate operational problems into stable technical solutions',
 ];
 
 const experience = [
@@ -141,6 +152,7 @@ export default function App() {
             <p className="eyebrow">Building reliable systems that stay strong in production</p>
             <h1>{profile.name}</h1>
             <p className="hero-title">{profile.title}</p>
+            <p className="hero-statement">{heroStatement}</p>
             <p className="hero-description">{profile.summary}</p>
 
             <div className="hero-proof">
@@ -153,6 +165,11 @@ export default function App() {
               <a className="button" href="#experience">View Experience</a>
               <a className="button button-secondary" href={`mailto:${profile.email}`}>Email Me</a>
             </div>
+
+            <div className="social-strip">
+              <a href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
+              <a href={profile.github} target="_blank" rel="noreferrer">GitHub</a>
+            </div>
           </div>
 
           <aside className="profile-card">
@@ -162,6 +179,15 @@ export default function App() {
             <a className="profile-link" href={`mailto:${profile.email}`}>{profile.email}</a>
             <p className="profile-label">Phone</p>
             <p className="profile-value">{profile.phone}</p>
+            <p className="profile-label">Profiles</p>
+            <div className="profile-links">
+              <a className="profile-link subtle-link" href={profile.linkedin} target="_blank" rel="noreferrer">
+                LinkedIn
+              </a>
+              <a className="profile-link subtle-link" href={profile.github} target="_blank" rel="noreferrer">
+                GitHub
+              </a>
+            </div>
           </aside>
         </section>
 
@@ -196,6 +222,22 @@ export default function App() {
               ))}
             </div>
           </article>
+        </section>
+
+        <section className="section signal-panel">
+          <div className="section-heading">
+            <p className="section-tag">What Stands Out</p>
+            <h2>The points an employer should notice immediately.</h2>
+          </div>
+
+          <div className="signal-grid">
+            {recruiterSignals.map((item) => (
+              <article key={item} className="signal-card">
+                <span className="signal-mark">01</span>
+                <p>{item}</p>
+              </article>
+            ))}
+          </div>
         </section>
 
         <section className="section">
@@ -250,8 +292,12 @@ export default function App() {
           </div>
 
           <div className="project-grid">
-            {projects.map((project) => (
+            {projects.map((project, index) => (
               <article key={project.title} className="project-card">
+                <div className="project-topline">
+                  <p className="project-index">{String(index + 1).padStart(2, '0')}</p>
+                  <p className="project-type">{project.type}</p>
+                </div>
                 <p className="project-type">{project.type}</p>
                 <h3>{project.title}</h3>
                 <p className="project-description">{project.description}</p>
@@ -291,6 +337,12 @@ export default function App() {
           <div className="contact-actions">
             <a className="button" href={`mailto:${profile.email}`}>{profile.email}</a>
             <a className="button button-secondary" href="tel:+639062951999">{profile.phone}</a>
+            <a className="button button-secondary" href={profile.linkedin} target="_blank" rel="noreferrer">
+              LinkedIn
+            </a>
+            <a className="button button-secondary" href={profile.github} target="_blank" rel="noreferrer">
+              GitHub
+            </a>
           </div>
         </section>
       </main>
