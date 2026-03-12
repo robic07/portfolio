@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap');
+
 :root {
-  font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+  font-family: "Manrope", "Segoe UI", sans-serif;
   color: #1f2430;
   background: #f4efe6;
   line-height: 1.6;
@@ -145,7 +147,8 @@ h3 {
 
 h1,
 h2 {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Fraunces", Georgia, serif;
+  letter-spacing: -0.03em;
 }
 
 .hero-copy h1,
@@ -155,9 +158,9 @@ h2 {
 }
 
 .hero-title {
-  font-size: 1.1rem;
+  font-size: 1.02rem;
   color: #d8dfeb;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   margin-bottom: 1rem;
 }
@@ -313,6 +316,10 @@ h2 {
   font-size: 2rem;
   font-weight: 800;
   color: #182034;
+}
+
+.metric-label {
+  line-height: 1.45;
 }
 
 .feature-layout {
@@ -585,8 +592,30 @@ h2 {
 }
 
 .contact-panel {
-  grid-template-columns: minmax(0, 1.2fr) auto;
-  align-items: center;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  align-items: start;
+  gap: 2rem;
+}
+
+.contact-panel h2 {
+  max-width: 12ch;
+  margin-bottom: 1rem;
+}
+
+.contact-panel p {
+  max-width: 34rem;
+}
+
+.contact-actions {
+  justify-content: flex-start;
+  align-content: flex-start;
+  gap: 0.9rem;
+  padding-top: 1.2rem;
+}
+
+.contact-actions .button,
+.contact-actions .button-secondary {
+  min-width: 13rem;
 }
 
 .closing-banner {
@@ -622,6 +651,10 @@ h2 {
   h1 {
     max-width: 100%;
   }
+
+  .contact-actions {
+    padding-top: 0;
+  }
 }
 
 @media (max-width: 640px) {
@@ -653,5 +686,11 @@ h2 {
 
   .contact-actions {
     width: 100%;
+    flex-direction: column;
+  }
+
+  .contact-actions .button,
+  .contact-actions .button-secondary {
+    min-width: 100%;
   }
 }
