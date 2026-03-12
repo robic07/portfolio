@@ -1,178 +1,269 @@
-const skills = [
-  'React',
-  'JavaScript (ES6+)',
-  'Node.js',
-  'Vite',
-  'REST APIs',
-  'UI/UX Design',
-  'Accessibility (WCAG)',
-  'Performance Optimization',
-  'GitHub Actions',
-  'Cloud Deployment',
+const profile = {
+  name: 'Robic John C. Borja',
+  title: 'Web Developer | Backend Developer | Production Support',
+  location: 'Bacoor, Cavite, Philippines',
+  email: 'rborja.ccheetah@gmail.com',
+  phone: '0906 295 1999',
+  summary:
+    'I build and support web applications that need to stay stable in production, move cleanly through delivery, and remain maintainable as teams scale. My work spans backend services, production support, web and mobile development, debugging, documentation, and cross-team problem solving.',
+};
+
+const metrics = [
+  { value: '5+', label: 'Years Building Web Products' },
+  { value: '3', label: 'Production-Focused Roles' },
+  { value: '10+', label: 'Business Systems Delivered' },
+  { value: '24/7', label: 'Support Mindset for Live Systems' },
 ];
 
-const highlights = [
-  { label: 'Years Experience', value: '4+' },
-  { label: 'Production Projects Shipped', value: '20+' },
-  { label: 'Avg. Lighthouse Score', value: '95+' },
-  { label: 'Deployment Standard', value: 'CI/CD + GitHub Pages' },
+const strengths = [
+  'Backend services and production support for live applications',
+  'Web and mobile delivery using Vue, Node.js, TypeScript, and modern UI stacks',
+  'Database design, issue triage, debugging, and technical documentation',
+  'Cloud-aware development using AWS services, Azure tooling, and containerized workflows',
 ];
 
-const experiences = [
+const experience = [
   {
-    role: 'Frontend Engineer',
-    company: 'Brightwave Digital',
-    date: '2022 - Present',
+    company: 'Ascendon Digital Solutions Philippines Inc.',
+    role: 'Backend Developer / Production Support',
+    date: 'Aug 2025 - Present',
+    summary:
+      'Support and maintain backend services for banking and financial systems with emphasis on reliability, investigation, debugging, monitoring, and operational continuity.',
     points: [
-      'Built scalable React + Vite applications with reusable UI patterns and maintainable architecture.',
-      'Improved Lighthouse scores by 30% through code splitting, image optimization, and bundle tuning.',
-      'Partnered with product and QA to deliver accessible interfaces aligned to WCAG AA standards.',
+      'Build and maintain backend services with clean, scalable, and production-ready code.',
+      'Investigate incidents, resolve root-cause issues, and restore service stability for live systems.',
+      'Monitor logs and application behavior using AWS CloudWatch and related operational tools.',
+      'Work with PostgreSQL, API Gateway, and AWS Secrets Manager across production environments.',
+      'Produce technical documentation, incident reports, troubleshooting guides, and system notes.',
     ],
   },
   {
-    role: 'JavaScript Developer',
-    company: 'Freelance',
-    date: '2020 - 2022',
+    company: 'Infopiphany I.T. Solution',
+    role: 'Web / Mobile Developer',
+    date: 'Jun 2020 - Aug 2025',
+    summary:
+      'Designed and delivered web and mobile systems across e-commerce, HR, inventory, finance, and internal operations using Vue, Nuxt, Ionic, Node.js, and MySQL-based solutions.',
     points: [
-      'Delivered responsive web apps for education, e-commerce, and healthcare clients using React and Node.js tooling.',
-      'Translated business requirements into production-ready components and API integrations.',
-      'Implemented SEO and analytics strategies that improved organic traffic and conversion metrics.',
+      'Built responsive applications with Vue 2, Vue 3, Nuxt JS, Ionic, HTML, CSS, SCSS, Tailwind, and Bootstrap.',
+      'Developed backend APIs and services using Node.js, Express, and Sails.',
+      'Designed databases, implemented reporting workflows, and maintained business-critical system features.',
+      'Collaborated with designers, developers, clients, and stakeholders to deliver aligned solutions.',
+      'Provided onboarding, training, and technical guidance for internal users and teams.',
+    ],
+  },
+  {
+    company: 'Investpro Realty',
+    role: 'Web Developer',
+    date: 'Nov 2023 - Jun 2024',
+    summary:
+      'Delivered a real estate platform experience with property browsing, agent and user management, commission tracking, UI design, Azure-backed collaboration, and MERN-stack implementation.',
+    points: [
+      'Implemented front-end and back-end features using MongoDB, Express, React, and Node.js.',
+      'Built property listing, agent management, user dashboards, and commission processing flows.',
+      'Designed MongoDB schemas and improved data handling for responsive application behavior.',
+      'Supported project coordination, documentation, testing, and deployment preparation.',
     ],
   },
 ];
 
 const projects = [
   {
-    title: 'InsightBoard Analytics',
+    title: 'Banking Systems',
+    type: 'Confidential Financial Systems',
     description:
-      'A real-time dashboard that visualizes business metrics with interactive charts, role-based access, and filtering.',
-    stack: 'React, Node.js, Express, PostgreSQL',
-    impact: 'Reduced reporting turnaround from hours to minutes for operations teams.',
+      'Contributed to backend systems supporting banking and financial operations, with focus on data integrity, incident investigation, issue resolution, and secure production support.',
+    highlights: ['Backend services', 'Production support', 'PostgreSQL', 'AWS monitoring'],
   },
   {
-    title: 'Nomad Journal',
+    title: 'E-Commerce Suite',
+    type: 'Commerce Platform',
     description:
-      'A mobile-first travel journaling app with offline support, photo uploads, and route snapshots.',
-    stack: 'React, Vite, Firebase, PWA',
-    impact: 'Reached 8k+ active users and earned a 4.7/5 average user rating.',
+      'Built and maintained modules for product management, payment methods, promotions, finance tracking, and electronic commerce workflows that improved internal efficiency and online selling operations.',
+    highlights: ['Vue', 'Node.js', 'MySQL', 'Business workflows'],
   },
   {
-    title: 'HireFlow Portal',
+    title: 'Time Labor System',
+    type: 'Internal Operations Platform',
     description:
-      'A streamlined applicant tracking portal that helps recruiters shortlist candidates and automate updates.',
-    stack: 'React, Node.js, MongoDB, Tailwind CSS',
-    impact: 'Cut recruiter manual follow-up tasks by 40%.',
+      'Developed a labor tracking application for monitoring employee work and task activity in real time, giving teams clearer reporting and better day-to-day visibility.',
+    highlights: ['Vue', 'TypeScript', 'Reporting', 'Operations tracking'],
+  },
+  {
+    title: 'Mobile Inventory',
+    type: 'Mobile Inventory Management',
+    description:
+      'Created a mobile-first inventory system for tracking, managing, and organizing inventory items across workflows with a practical interface for operational teams.',
+    highlights: ['Ionic', 'Vue 3', 'TypeScript', 'Inventory management'],
+  },
+  {
+    title: 'Real Estate System',
+    type: 'MERN Platform',
+    description:
+      'Built a property platform with browsing, user and agent management, commission processing, and structured database design to support end-to-end real estate workflows.',
+    highlights: ['MongoDB', 'Express', 'React', 'Node.js'],
   },
 ];
 
-const certifications = [
-  'Meta Front-End Developer Professional Certificate',
-  'Google UX Design Certificate',
-  'Scrum Fundamentals Certified (SFC)',
+const skillGroups = [
+  {
+    title: 'Backend and Data',
+    items: ['Node.js', 'Express', 'Sails', 'PHP', 'SQL Server', 'MySQL', 'MongoDB', 'PostgreSQL'],
+  },
+  {
+    title: 'Frontend and Mobile',
+    items: ['Vue 2', 'Vue 3', 'Nuxt JS', 'React', 'Ionic', 'TypeScript', 'HTML', 'CSS', 'SCSS'],
+  },
+  {
+    title: 'Cloud and Operations',
+    items: ['AWS CloudWatch', 'AWS API Gateway', 'AWS Secrets Manager', 'Azure DevOps', 'Production monitoring'],
+  },
+  {
+    title: 'Workflow and Delivery',
+    items: ['Git', 'GitLab', 'Docker', 'Kubernetes', 'QA testing', 'Technical documentation'],
+  },
 ];
 
 export default function App() {
   return (
-    <div className="page">
-      <header className="hero">
-        <nav className="nav">
-          <p className="logo">Alex Carter</p>
-          <div className="nav-links">
-            <a href="#projects">Projects</a>
-            <a href="#experience">Experience</a>
-            <a href="#contact" className="button button-secondary">Hire Me</a>
-          </div>
-        </nav>
+    <div className="page-shell">
+      <div className="ambient ambient-one" />
+      <div className="ambient ambient-two" />
 
-        <div className="hero-content">
-          <p className="eyebrow">React + Node.js Engineer - Open to global opportunities</p>
-          <h1>I help teams ship high-quality JavaScript products that are fast, accessible, and built to scale.</h1>
-          <p className="hero-description">
-            This portfolio is now built with React on Vite, using Node.js tooling and modern deployment standards.
-            It highlights what I build, how I collaborate, and the measurable outcomes I deliver.
-          </p>
-          <div className="cta-group">
-            <a href="#projects" className="button">View Projects</a>
-            <a href="#contact" className="button button-secondary">Download Resume</a>
-          </div>
-        </div>
+      <main className="page">
+        <section className="hero-panel">
+          <div className="hero-copy">
+            <p className="eyebrow">Portfolio of real production work</p>
+            <h1>{profile.name}</h1>
+            <p className="hero-title">{profile.title}</p>
+            <p className="hero-description">{profile.summary}</p>
 
-        <div className="stats-grid">
-          {highlights.map((item) => (
-            <article key={item.label} className="stat-card">
-              <p className="stat-value">{item.value}</p>
-              <p className="stat-label">{item.label}</p>
+            <div className="cta-group">
+              <a className="button" href="#experience">View Experience</a>
+              <a className="button button-secondary" href={`mailto:${profile.email}`}>Email Me</a>
+            </div>
+          </div>
+
+          <aside className="profile-card">
+            <p className="profile-label">Based in</p>
+            <p className="profile-value">{profile.location}</p>
+            <p className="profile-label">Email</p>
+            <a className="profile-link" href={`mailto:${profile.email}`}>{profile.email}</a>
+            <p className="profile-label">Phone</p>
+            <p className="profile-value">{profile.phone}</p>
+          </aside>
+        </section>
+
+        <section className="metrics-grid">
+          {metrics.map((item) => (
+            <article key={item.label} className="metric-card">
+              <p className="metric-value">{item.value}</p>
+              <p className="metric-label">{item.label}</p>
             </article>
           ))}
-        </div>
-      </header>
+        </section>
 
-      <main>
-        <section className="section" id="skills">
-          <h2>Core Skills</h2>
-          <div className="chip-grid">
-            {skills.map((skill) => (
-              <span key={skill} className="chip">{skill}</span>
-            ))}
-          </div>
+        <section className="feature-layout">
+          <article className="section section-strong">
+            <p className="section-tag">About Me</p>
+            <h2>Development work grounded in reliability, delivery, and support.</h2>
+            <p>
+              My background combines application development with production ownership. I have worked across
+              backend implementation, issue investigation, cloud-backed support, UI delivery, database design,
+              and system documentation for business platforms used in finance, commerce, inventory, and real estate.
+            </p>
+          </article>
+
+          <article className="section">
+            <p className="section-tag">Core Focus</p>
+            <div className="strength-list">
+              {strengths.map((item) => (
+                <div key={item} className="strength-item">
+                  <span className="strength-bullet" />
+                  <p>{item}</p>
+                </div>
+              ))}
+            </div>
+          </article>
         </section>
 
         <section className="section" id="experience">
-          <h2>Experience</h2>
-          <div className="card-grid">
-            {experiences.map((item) => (
-              <article key={`${item.role}-${item.company}`} className="card">
-                <div className="card-header">
-                  <h3>{item.role}</h3>
-                  <span>{item.date}</span>
+          <div className="section-heading">
+            <p className="section-tag">Experience</p>
+            <h2>Professional history shaped by delivery work and live-system responsibility.</h2>
+          </div>
+
+          <div className="timeline">
+            {experience.map((item) => (
+              <article key={`${item.company}-${item.role}`} className="timeline-item">
+                <div className="timeline-marker" />
+                <div className="timeline-body">
+                  <div className="timeline-header">
+                    <div>
+                      <p className="timeline-date">{item.date}</p>
+                      <h3>{item.role}</h3>
+                      <p className="timeline-company">{item.company}</p>
+                    </div>
+                  </div>
+                  <p className="timeline-summary">{item.summary}</p>
+                  <ul className="timeline-points">
+                    {item.points.map((point) => (
+                      <li key={point}>{point}</li>
+                    ))}
+                  </ul>
                 </div>
-                <p className="company">{item.company}</p>
-                <ul>
-                  {item.points.map((point) => (
-                    <li key={point}>{point}</li>
-                  ))}
-                </ul>
               </article>
             ))}
           </div>
         </section>
 
         <section className="section" id="projects">
-          <h2>Featured Projects</h2>
-          <div className="card-grid project-grid">
+          <div className="section-heading">
+            <p className="section-tag">Selected Work</p>
+            <h2>Projects and systems drawn from my actual resume experience.</h2>
+          </div>
+
+          <div className="project-grid">
             {projects.map((project) => (
-              <article key={project.title} className="card project-card">
+              <article key={project.title} className="project-card">
+                <p className="project-type">{project.type}</p>
                 <h3>{project.title}</h3>
-                <p>{project.description}</p>
-                <p className="stack">{project.stack}</p>
-                <p className="impact">Impact: {project.impact}</p>
+                <p className="project-description">{project.description}</p>
+                <div className="chip-grid">
+                  {project.highlights.map((item) => (
+                    <span key={item} className="chip">{item}</span>
+                  ))}
+                </div>
               </article>
             ))}
           </div>
         </section>
 
-        <section className="section">
-          <h2>Certifications</h2>
-          <ul className="cert-list">
-            {certifications.map((cert) => (
-              <li key={cert}>{cert}</li>
-            ))}
-          </ul>
+        <section className="skill-layout">
+          {skillGroups.map((group) => (
+            <article key={group.title} className="section skill-card">
+              <p className="section-tag">{group.title}</p>
+              <div className="skill-chip-grid">
+                {group.items.map((item) => (
+                  <span key={item} className="skill-chip">{item}</span>
+                ))}
+              </div>
+            </article>
+          ))}
         </section>
 
-        <section className="section contact" id="contact">
-          <h2>Let&apos;s Build Something Great</h2>
-          <p>
-            Available for full-time roles and freelance collaboration. Reach out and I&apos;ll get back within 24 hours.
-          </p>
+        <section className="section contact-panel" id="contact">
+          <div>
+            <p className="section-tag">Contact</p>
+            <h2>Available for web development, backend support, and production-focused roles.</h2>
+            <p>
+              If you need someone who can build features, investigate live issues, and work across engineering and
+              operations, contact me directly.
+            </p>
+          </div>
+
           <div className="contact-actions">
-            <a className="button" href="mailto:alexcarter.dev@email.com">alexcarter.dev@email.com</a>
-            <a className="button button-secondary" href="https://www.linkedin.com" target="_blank" rel="noreferrer">
-              LinkedIn
-            </a>
-            <a className="button button-secondary" href="https://github.com" target="_blank" rel="noreferrer">
-              GitHub
-            </a>
+            <a className="button" href={`mailto:${profile.email}`}>{profile.email}</a>
+            <a className="button button-secondary" href="tel:+639062951999">{profile.phone}</a>
           </div>
         </section>
       </main>
