@@ -37,28 +37,31 @@ npm run build
 npm run preview
 ```
 
-## Deployment (GitHub Pages via CI/CD)
+## Deployment (GitHub Pages from `main` / `docs`)
 
-This repo includes `.github/workflows/deploy-pages.yml` that:
-
-1. Installs Node.js dependencies with `npm ci`
-2. Builds the app with `npm run build`
-3. Uploads `dist/` and deploys to GitHub Pages
+This repo includes a committed production build in `docs/` so GitHub Pages can publish directly from the repository without relying on the Pages deployment action.
 
 ### One-time GitHub setup
 
 1. Push this repo to GitHub
 2. Go to **Settings -> Pages**
-3. Set **Build and deployment -> Source** to **GitHub Actions**
-4. Push to `main` or run the workflow manually
+3. Set **Build and deployment -> Source** to **Deploy from a branch**
+4. Select branch `main` and folder `/docs`
+5. Save
 
-After deployment, your site URL will be:
-
-- `https://<your-github-username>.github.io/<repo-name>/`
-
-For this repo, that should be:
+After deployment, your site URL should be:
 
 - `https://robic07.github.io/portfolio/`
+
+### Updating the published site
+
+When you change the app, regenerate the published files with:
+
+```bash
+npm run build:pages
+```
+
+Then commit the updated `docs/` folder.
 
 ## Customize for your profile
 
