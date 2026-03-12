@@ -22,7 +22,7 @@ const experiences = [
   {
     role: 'Frontend Engineer',
     company: 'Brightwave Digital',
-    date: '2022 — Present',
+    date: '2022 - Present',
     points: [
       'Built scalable React + Vite applications with reusable UI patterns and maintainable architecture.',
       'Improved Lighthouse scores by 30% through code splitting, image optimization, and bundle tuning.',
@@ -32,7 +32,7 @@ const experiences = [
   {
     role: 'JavaScript Developer',
     company: 'Freelance',
-    date: '2020 — 2022',
+    date: '2020 - 2022',
     points: [
       'Delivered responsive web apps for education, e-commerce, and healthcare clients using React and Node.js tooling.',
       'Translated business requirements into production-ready components and API integrations.',
@@ -85,7 +85,7 @@ export default function App() {
         </nav>
 
         <div className="hero-content">
-          <p className="eyebrow">React + Node.js Engineer • Open to global opportunities</p>
+          <p className="eyebrow">React + Node.js Engineer - Open to global opportunities</p>
           <h1>I help teams ship high-quality JavaScript products that are fast, accessible, and built to scale.</h1>
           <p className="hero-description">
             This portfolio is now built with React on Vite, using Node.js tooling and modern deployment standards.

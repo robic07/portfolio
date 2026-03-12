@@ -37,7 +37,7 @@ npm run build
 npm run preview
 ```
 
-## Deployment (Global Standard via CI/CD)
+## Deployment (GitHub Pages via CI/CD)
 
 This repo includes `.github/workflows/deploy-pages.yml` that:
 
@@ -48,17 +48,21 @@ This repo includes `.github/workflows/deploy-pages.yml` that:
 ### One-time GitHub setup
 
 1. Push this repo to GitHub
-2. Go to **Settings → Pages**
-3. Set **Build and deployment → Source** to **GitHub Actions**
-4. Push to `main` (or run workflow manually)
+2. Go to **Settings -> Pages**
+3. Set **Build and deployment -> Source** to **GitHub Actions**
+4. Push to `main` or run the workflow manually
 
 After deployment, your site URL will be:
 
 - `https://<your-github-username>.github.io/<repo-name>/`
 
+For this repo, that should be:
+
+- `https://robic07.github.io/portfolio/`
+
 ## Customize for your profile
 
 Update content in:
 
-- `src/App.jsx` (hero, skills, experience, projects, contact)
-- `src/styles.css` (theme and layout styling)
+- `src/App.jsx` for hero, skills, experience, projects, and contact details
+- `src/styles.css` for theme and layout styling
