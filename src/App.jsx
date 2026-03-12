@@ -251,8 +251,8 @@ export default function App() {
 
         <section className="section signal-panel">
           <div className="section-heading">
-            <p className="section-tag">What Stands Out</p>
-            <h2>The points an employer should notice immediately.</h2>
+            <p className="section-tag">Professional Highlights</p>
+            <h2>Key areas of experience across development, support, and delivery.</h2>
           </div>
 
           <div className="signal-grid">
@@ -267,8 +267,8 @@ export default function App() {
 
         <section className="section">
           <div className="section-heading">
-            <p className="section-tag">Why Hire Me</p>
-            <h2>A concise case for what I bring to an engineering team.</h2>
+            <p className="section-tag">Working Style</p>
+            <h2>How I contribute across engineering, support, and delivery work.</h2>
           </div>
 
           <div className="reason-grid">
