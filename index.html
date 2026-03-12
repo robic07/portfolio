@@ -6,7 +6,7 @@
     <title>Portfolio | Alex Carter</title>
     <meta
       name="description"
-      content="Responsive portfolio website for Alex Carter featuring projects, skills, and resume highlights."
+      content="Professional portfolio for Alex Carter, frontend engineer. Explore projects, impact metrics, and contact details for hiring opportunities."
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
@@ -20,12 +20,21 @@
       const skills = [
         'React',
         'TypeScript',
+        'Next.js',
         'JavaScript (ES6+)',
         'Node.js',
         'REST APIs',
         'UI/UX Design',
-        'Responsive Web Design',
+        'Accessibility (WCAG)',
+        'Performance Optimization',
         'Git & GitHub',
+      ];
+
+      const highlights = [
+        { label: 'Years Experience', value: '4+' },
+        { label: 'Production Projects Shipped', value: '20+' },
+        { label: 'Avg. Lighthouse Score', value: '95+' },
+        { label: 'Team Functions Supported', value: 'Product • Design • QA' },
       ];
 
       const experiences = [
@@ -34,9 +43,9 @@
           company: 'Brightwave Digital',
           date: '2022 — Present',
           points: [
-            'Built modern customer-facing React applications with reusable component patterns.',
-            'Improved Lighthouse performance scores by 30% through code splitting and image optimization.',
-            'Collaborated with product and design teams to ship accessible and responsive user interfaces.',
+            'Built modern customer-facing React applications with reusable component patterns and design system tokens.',
+            'Improved Lighthouse performance scores by 30% through code splitting, image optimization, and lazy loading.',
+            'Collaborated with product, design, and QA teams to deliver accessible interfaces that passed WCAG AA checks.',
           ],
         },
         {
@@ -45,8 +54,8 @@
           date: '2020 — 2022',
           points: [
             'Delivered responsive websites for clients in education, e-commerce, and healthcare.',
-            'Translated business requirements into maintainable front-end architecture.',
-            'Implemented analytics and SEO best practices to improve traffic and conversions.',
+            'Translated business requirements into maintainable front-end architecture with clear component boundaries.',
+            'Implemented SEO and analytics strategies that improved organic traffic and conversion metrics.',
           ],
         },
       ];
@@ -55,21 +64,30 @@
         {
           title: 'InsightBoard Analytics',
           description:
-            'A dashboard that visualizes business metrics in real time with interactive charts and role-based access.',
+            'A real-time dashboard that visualizes business metrics with interactive charts, role-based access, and filtering.',
           stack: 'React, Node.js, Chart.js, PostgreSQL',
+          impact: 'Reduced reporting turnaround from hours to minutes for operations teams.',
         },
         {
           title: 'Nomad Journal',
           description:
             'A mobile-first travel journaling app with offline support, photo uploads, and route snapshots.',
           stack: 'React, Firebase, PWA, Cloud Storage',
+          impact: 'Reached 8k+ active users and earned a 4.7/5 average user rating.',
         },
         {
           title: 'HireFlow Portal',
           description:
             'A streamlined applicant tracking portal that helps recruiters shortlist candidates and automate updates.',
           stack: 'React, Express, MongoDB, Tailwind CSS',
+          impact: 'Cut recruiter manual follow-up tasks by 40%.',
         },
+      ];
+
+      const certifications = [
+        'Google UX Design Certificate',
+        'Meta Front-End Developer Professional Certificate',
+        'Scrum Fundamentals Certified (SFC)',
       ];
 
       function App() {
@@ -84,9 +102,11 @@
               { className: 'nav' },
               React.createElement('p', { className: 'logo' }, 'Alex Carter'),
               React.createElement(
-                'a',
-                { href: '#contact', className: 'button button-secondary' },
-                "Let's Talk",
+                'div',
+                { className: 'nav-links' },
+                React.createElement('a', { href: '#projects' }, 'Projects'),
+                React.createElement('a', { href: '#experience' }, 'Experience'),
+                React.createElement('a', { href: '#contact', className: 'button button-secondary' }, 'Hire Me'),
               ),
             ),
             React.createElement(
@@ -95,26 +115,34 @@
               React.createElement(
                 'p',
                 { className: 'eyebrow' },
-                'Frontend Engineer • Problem Solver • Design-minded Developer',
+                'Frontend Engineer • Product-minded • Open to new opportunities',
               ),
               React.createElement(
                 'h1',
                 null,
-                'I build fast, beautiful, and accessible web experiences that turn ideas into products.',
+                'I help teams ship polished web products that are fast, accessible, and built for growth.',
               ),
               React.createElement(
                 'p',
                 { className: 'hero-description' },
-                "I'm a frontend developer with experience building responsive products from concept to launch. I focus on usability, performance, and scalable architecture.",
+                "I'm a frontend developer with hands-on experience in turning ideas into production-ready products. If you're hiring, this portfolio shows what I build, how I collaborate, and the results I deliver.",
               ),
               React.createElement(
                 'div',
                 { className: 'cta-group' },
                 React.createElement('a', { href: '#projects', className: 'button' }, 'View Projects'),
+                React.createElement('a', { href: '#contact', className: 'button button-secondary' }, 'Download Resume'),
+              ),
+            ),
+            React.createElement(
+              'div',
+              { className: 'stats-grid' },
+              ...highlights.map((item) =>
                 React.createElement(
-                  'a',
-                  { href: '#experience', className: 'button button-secondary' },
-                  'Resume Highlights',
+                  'article',
+                  { key: item.label, className: 'stat-card' },
+                  React.createElement('p', { className: 'stat-value' }, item.value),
+                  React.createElement('p', { className: 'stat-label' }, item.label),
                 ),
               ),
             ),
@@ -125,17 +153,17 @@
             React.createElement(
               'section',
               { className: 'section', id: 'about' },
-              React.createElement('h2', null, 'About Me'),
+              React.createElement('h2', null, 'Why Employers Choose to Work With Me'),
               React.createElement(
                 'p',
                 null,
-                'I enjoy transforming complex problems into simple, polished interfaces. My work combines technical excellence with empathy for users, resulting in products people actually enjoy using.',
+                'I combine engineering quality with strong communication. I proactively identify risks, write clean and maintainable UI code, and align technical decisions with product goals so teams can deliver confidently and faster.',
               ),
             ),
             React.createElement(
               'section',
               { className: 'section', id: 'skills' },
-              React.createElement('h2', null, 'Skills'),
+              React.createElement('h2', null, 'Core Skills'),
               React.createElement(
                 'div',
                 { className: 'chip-grid' },
@@ -172,7 +200,7 @@
             React.createElement(
               'section',
               { className: 'section', id: 'projects' },
-              React.createElement('h2', null, 'Projects'),
+              React.createElement('h2', null, 'Featured Projects'),
               React.createElement(
                 'div',
                 { className: 'card-grid project-grid' },
@@ -183,19 +211,43 @@
                     React.createElement('h3', null, project.title),
                     React.createElement('p', null, project.description),
                     React.createElement('p', { className: 'stack' }, project.stack),
+                    React.createElement('p', { className: 'impact' }, `Impact: ${project.impact}`),
                   ),
                 ),
               ),
             ),
             React.createElement(
               'section',
-              { className: 'section contact', id: 'contact' },
-              React.createElement('h2', null, "Let's Build Something Great"),
-              React.createElement('p', null, 'Open to frontend opportunities, freelance work, and exciting collaborations.'),
+              { className: 'section', id: 'certifications' },
+              React.createElement('h2', null, 'Certifications & Professional Development'),
               React.createElement(
-                'a',
-                { className: 'button', href: 'mailto:alex.carter.dev@email.com' },
-                'alex.carter.dev@email.com',
+                'ul',
+                { className: 'cert-list' },
+                ...certifications.map((item) => React.createElement('li', { key: item }, item)),
+              ),
+            ),
+            React.createElement(
+              'section',
+              { className: 'section contact', id: 'contact' },
+              React.createElement('h2', null, 'Open to Frontend and Full-Stack Opportunities'),
+              React.createElement(
+                'p',
+                null,
+                'Best way to reach me: email me directly and include your role/company. I am available for full-time, contract, and freelance opportunities.',
+              ),
+              React.createElement(
+                'div',
+                { className: 'contact-actions' },
+                React.createElement(
+                  'a',
+                  { className: 'button', href: 'mailto:alex.carter.dev@email.com' },
+                  'alex.carter.dev@email.com',
+                ),
+                React.createElement(
+                  'a',
+                  { className: 'button button-secondary', href: 'https://github.com', target: '_blank', rel: 'noreferrer' },
+                  'GitHub Profile',
+                ),
               ),
             ),
           ),
