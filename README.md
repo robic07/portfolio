@@ -53,6 +53,8 @@ After deployment, your site URL should be:
 
 - `https://robic07.github.io/portfolio/`
 
+GitHub Pages is configured to publish from `main` and `/docs`.
+
 ### Updating the published site
 
 When you change the app, regenerate the published files with:
