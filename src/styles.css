@@ -574,6 +574,7 @@ h2 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
+  margin-bottom: 1.4rem;
 }
 
 .skill-card {
@@ -595,6 +596,7 @@ h2 {
   grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
   align-items: start;
   gap: 2rem;
+  margin-top: 0.5rem;
 }
 
 .contact-panel h2 {
@@ -620,6 +622,7 @@ h2 {
 
 .closing-banner {
   margin-bottom: 1rem;
+  margin-top: 0.25rem;
   padding: 2rem;
   border-radius: 1.8rem;
   background:
@@ -631,6 +634,16 @@ h2 {
 
 .closing-banner p:last-child {
   margin-bottom: 0;
+}
+
+@media (max-width: 1180px) {
+  .contact-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-actions {
+    padding-top: 0;
+  }
 }
 
 @media (max-width: 960px) {
@@ -650,10 +663,6 @@ h2 {
 
   h1 {
     max-width: 100%;
-  }
-
-  .contact-actions {
-    padding-top: 0;
   }
 }
 
