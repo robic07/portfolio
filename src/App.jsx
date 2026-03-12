@@ -5,7 +5,7 @@ const profile = {
   email: 'rborja.ccheetah@gmail.com',
   phone: '0906 295 1999',
   summary:
-    'I build and support web applications that need to stay stable in production, move cleanly through delivery, and remain maintainable as teams scale. My work spans backend services, production support, web and mobile development, debugging, documentation, and cross-team problem solving.',
+    'I help teams build stable web applications, resolve production issues fast, and deliver systems that stay maintainable as the business grows. My background covers backend development, production support, web and mobile delivery, debugging, documentation, and cross-team execution.',
 };
 
 const metrics = [
@@ -20,6 +20,12 @@ const strengths = [
   'Web and mobile delivery using Vue, Node.js, TypeScript, and modern UI stacks',
   'Database design, issue triage, debugging, and technical documentation',
   'Cloud-aware development using AWS services, Azure tooling, and containerized workflows',
+];
+
+const reasons = [
+  'I can work on both feature delivery and production support, which reduces handoff gaps and speeds up issue resolution.',
+  'I have experience across finance, e-commerce, inventory, and real estate systems with real business workflows.',
+  'I contribute beyond coding through documentation, debugging, monitoring, collaboration, and user-facing problem solving.',
 ];
 
 const experience = [
@@ -132,10 +138,16 @@ export default function App() {
       <main className="page">
         <section className="hero-panel">
           <div className="hero-copy">
-            <p className="eyebrow">Portfolio of real production work</p>
+            <p className="eyebrow">Building reliable systems that stay strong in production</p>
             <h1>{profile.name}</h1>
             <p className="hero-title">{profile.title}</p>
             <p className="hero-description">{profile.summary}</p>
+
+            <div className="hero-proof">
+              <span>Backend development</span>
+              <span>Production support</span>
+              <span>Business systems delivery</span>
+            </div>
 
             <div className="cta-group">
               <a className="button" href="#experience">View Experience</a>
@@ -165,7 +177,7 @@ export default function App() {
         <section className="feature-layout">
           <article className="section section-strong">
             <p className="section-tag">About Me</p>
-            <h2>Development work grounded in reliability, delivery, and support.</h2>
+            <h2>Development work that balances delivery speed with production reliability.</h2>
             <p>
               My background combines application development with production ownership. I have worked across
               backend implementation, issue investigation, cloud-backed support, UI delivery, database design,
@@ -184,6 +196,21 @@ export default function App() {
               ))}
             </div>
           </article>
+        </section>
+
+        <section className="section">
+          <div className="section-heading">
+            <p className="section-tag">Why Hire Me</p>
+            <h2>A concise case for what I bring to an engineering team.</h2>
+          </div>
+
+          <div className="reason-grid">
+            {reasons.map((item) => (
+              <article key={item} className="reason-card">
+                <p>{item}</p>
+              </article>
+            ))}
+          </div>
         </section>
 
         <section className="section" id="experience">
