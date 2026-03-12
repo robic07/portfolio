@@ -1,38 +1,64 @@
-# Portfolio Website (React + GitHub Pages)
+# Portfolio Website (React + Vite + Node.js)
 
-A modern portfolio website built with React (browser ESM imports), designed to showcase your skills, projects, and hiring value.
+A professional portfolio built with **React (JavaScript)** and **Vite**, using standard Node.js tooling for development, linting, build, and deployment.
 
-## Run locally
+## Tech Stack
+
+- React 18
+- Vite 5
+- ESLint 9 (flat config)
+- GitHub Actions for CI/CD deployment to GitHub Pages
+
+## Getting Started
+
+### 1) Install dependencies
 
 ```bash
-python3 -m http.server 4173
+npm install
 ```
 
-Then open: `http://localhost:4173`
+### 2) Run development server
 
-## Deploy automatically with GitHub Actions
+```bash
+npm run dev
+```
 
-This repo includes a GitHub Actions workflow at `.github/workflows/deploy-pages.yml` that deploys the portfolio to GitHub Pages whenever you push to `main`.
+Open: `http://localhost:5173`
+
+### 3) Build for production
+
+```bash
+npm run build
+```
+
+### 4) Preview production build
+
+```bash
+npm run preview
+```
+
+## Deployment (Global Standard via CI/CD)
+
+This repo includes `.github/workflows/deploy-pages.yml` that:
+
+1. Installs Node.js dependencies with `npm ci`
+2. Builds the app with `npm run build`
+3. Uploads `dist/` and deploys to GitHub Pages
 
 ### One-time GitHub setup
 
-1. Push this repository to GitHub.
-2. In your repository, go to **Settings → Pages**.
-3. Under **Build and deployment**, set **Source** to **GitHub Actions**.
-4. Push to `main` (or run the workflow manually from **Actions** tab).
+1. Push this repo to GitHub
+2. Go to **Settings → Pages**
+3. Set **Build and deployment → Source** to **GitHub Actions**
+4. Push to `main` (or run workflow manually)
 
-After deploy, your portfolio will be available at:
+After deployment, your site URL will be:
 
 - `https://<your-github-username>.github.io/<repo-name>/`
 
-## Best sections to customize for job applications
+## Customize for your profile
 
-Update the following inside `index.html`:
+Update content in:
 
-- Hero headline and introduction
-- Skills list
-- Experience bullets with measurable outcomes
-- Project impact statements
-- Certifications and contact links
-
-Design and style tweaks can be made in `styles.css`.
+- `src/App.jsx` (hero, skills, experience, projects, contact)
+- `src/styles.css` (theme and layout styling)
