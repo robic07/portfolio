@@ -87,36 +87,61 @@ const projects = [
   {
     title: 'Banking Systems',
     type: 'Confidential Financial Systems',
-    description:
-      'Contributed to backend systems supporting banking and financial operations, with focus on data integrity, incident investigation, issue resolution, and secure production support.',
+    role: 'Backend Developer / Production Support',
+    challenge:
+      'Financial systems require stable backend behavior, careful incident handling, and consistent support for sensitive production environments.',
+    solution:
+      'Supported backend services, investigated incidents, monitored production behavior, and documented troubleshooting steps to keep business-critical workflows dependable.',
+    outcome:
+      'Improved operational continuity through faster issue investigation, clearer support processes, and stronger day-to-day production reliability.',
     highlights: ['Backend services', 'Production support', 'PostgreSQL', 'AWS monitoring'],
   },
   {
     title: 'E-Commerce Suite',
     type: 'Commerce Platform',
-    description:
-      'Built and maintained modules for product management, payment methods, promotions, finance tracking, and electronic commerce workflows that improved internal efficiency and online selling operations.',
+    role: 'Web / Mobile Developer',
+    challenge:
+      'Commerce operations needed product, payment, promotion, and finance workflows that were easier to manage across connected business modules.',
+    solution:
+      'Built and maintained modules for product management, payment options, promotional control, finance tracking, and electronic commerce operations using modern web tooling.',
+    outcome:
+      'Delivered a more organized internal workflow for online selling, pricing management, and transaction handling across the platform.',
     highlights: ['Vue', 'Node.js', 'MySQL', 'Business workflows'],
   },
   {
     title: 'Time Labor System',
     type: 'Internal Operations Platform',
-    description:
-      'Developed a labor tracking application for monitoring employee work and task activity in real time, giving teams clearer reporting and better day-to-day visibility.',
+    role: 'Web Developer',
+    challenge:
+      'Teams needed a simpler way to monitor labor activity and track work in real time without relying on fragmented manual processes.',
+    solution:
+      'Created a labor tracking application focused on visibility, reporting, and practical task monitoring for day-to-day operations.',
+    outcome:
+      'Gave teams clearer reporting and faster access to work activity data, improving operational awareness across labor workflows.',
     highlights: ['Vue', 'TypeScript', 'Reporting', 'Operations tracking'],
   },
   {
     title: 'Mobile Inventory',
     type: 'Mobile Inventory Management',
-    description:
-      'Created a mobile-first inventory system for tracking, managing, and organizing inventory items across workflows with a practical interface for operational teams.',
+    role: 'Mobile Developer',
+    challenge:
+      'Inventory work needed to be accessible on mobile so teams could update and manage items closer to actual operations.',
+    solution:
+      'Built a mobile-first inventory system with practical workflows for tracking, managing, and organizing inventory records.',
+    outcome:
+      'Made inventory handling more accessible for operational users and improved consistency in item management across workflows.',
     highlights: ['Ionic', 'Vue 3', 'TypeScript', 'Inventory management'],
   },
   {
     title: 'Real Estate System',
     type: 'MERN Platform',
-    description:
-      'Built a property platform with browsing, user and agent management, commission processing, and structured database design to support end-to-end real estate workflows.',
+    role: 'Web Developer',
+    challenge:
+      'The platform needed property browsing, agent coordination, and commission tracking in one system that stayed usable for both internal teams and end users.',
+    solution:
+      'Built features for listings, user and agent management, commission workflows, and database structure using the MERN stack.',
+    outcome:
+      'Supported a more connected property workflow with clearer data handling and smoother interaction between agents, users, and platform administrators.',
     highlights: ['MongoDB', 'Express', 'React', 'Node.js'],
   },
 ];
@@ -231,9 +256,9 @@ export default function App() {
           </div>
 
           <div className="signal-grid">
-            {recruiterSignals.map((item) => (
+            {recruiterSignals.map((item, index) => (
               <article key={item} className="signal-card">
-                <span className="signal-mark">01</span>
+                <span className="signal-mark">{String(index + 1).padStart(2, '0')}</span>
                 <p>{item}</p>
               </article>
             ))}
@@ -298,9 +323,22 @@ export default function App() {
                   <p className="project-index">{String(index + 1).padStart(2, '0')}</p>
                   <p className="project-type">{project.type}</p>
                 </div>
-                <p className="project-type">{project.type}</p>
                 <h3>{project.title}</h3>
-                <p className="project-description">{project.description}</p>
+                <p className="project-role">{project.role}</p>
+                <div className="case-study">
+                  <div>
+                    <p className="case-label">Challenge</p>
+                    <p className="project-description">{project.challenge}</p>
+                  </div>
+                  <div>
+                    <p className="case-label">Solution</p>
+                    <p className="project-description">{project.solution}</p>
+                  </div>
+                  <div>
+                    <p className="case-label">Outcome</p>
+                    <p className="project-description">{project.outcome}</p>
+                  </div>
+                </div>
                 <div className="chip-grid">
                   {project.highlights.map((item) => (
                     <span key={item} className="chip">{item}</span>
@@ -344,6 +382,15 @@ export default function App() {
               GitHub
             </a>
           </div>
+        </section>
+
+        <section className="closing-banner">
+          <p className="section-tag">Closing Note</p>
+          <h2>I build dependable systems, support live environments, and help teams ship work that lasts.</h2>
+          <p>
+            If your team needs someone who can handle both delivery and production responsibility, I am ready to
+            contribute.
+          </p>
         </section>
       </main>
     </div>
